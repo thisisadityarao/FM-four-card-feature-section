@@ -6,6 +6,7 @@ body {
   font-family: variables.$text-font-stack;
   font-size: 0.938rem; //15px
   color: variables.$grayish-blue-400;
+  background-color: variables.$light-gray-200;
 }
 
 main {
@@ -30,7 +31,6 @@ main {
     font-size: clamp(1.5rem, 1.2727rem + 1.1364vi, 2.125rem);
     font-weight: 200;
     line-height: 1.6;
-    color: variables.$light-gray-200;
 
     @media (min-width: 75rem) {
       line-height: 1.4;
