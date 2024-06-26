@@ -18,13 +18,14 @@
     padding-block-start: 3rem;
     max-width: 100%;
     grid-template-columns: repeat(3, minmax(22.5rem, 1fr));
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 15rem);
     grid-auto-flow: column;
   }
 }
 
 .card {
   max-width: 22.5rem;
+  height: 15rem;
   margin-inline: auto;
   padding: 2rem;
   @include mixins.shadow;
@@ -37,7 +38,7 @@
   }
 
   p {
-    margin-block-start: 0.75rem;
+    margin-block-start: 1rem;
     line-height: 1.7;
     font-size: 0.875rem; //14px
   }
@@ -63,6 +64,7 @@
   border-top: 4px solid variables.$red;
 
   @media (min-width: 75rem) {
+    align-self: end;
     grid-column: 2;
     grid-row: 1 / 2;
   }
@@ -72,6 +74,7 @@
   border-top: 4px solid variables.$orange;
 
   @media (min-width: 75rem) {
+    align-self: start;
     grid-column: 2;
     grid-row: 2 / 3;
   }
