@@ -1,0 +1,51 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+body {
+  height: 100svh;
+  font-family: variables.$text-font-stack;
+  font-size: 0.938rem; //15px
+  color: variables.$grayish-blue-400;
+}
+
+main {
+  height: 100svh;
+  @include mixins.wrapper;
+  display: grid;
+  gap: 4rem;
+  padding-block-start: 4rem;
+
+  @media (min-width: 75rem) {
+    padding-block-start: 3rem;
+    gap: 2rem;
+  }
+}
+
+.intro {
+  text-align: center;
+  align-self: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2727rem + 1.1364vi, 2.125rem);
+    font-weight: 200;
+    line-height: 1.6;
+
+    @media (min-width: 75rem) {
+      line-height: 1.4;
+    }
+
+    strong {
+      display: block;
+      font-weight: 600;
+      color: variables.$dark-blue-700;
+    }
+  }
+
+  p {
+    max-width: 55ch;
+    margin-inline: auto;
+    margin-block-start: 1rem;
+    line-height: 1.6;
+  }
+}
