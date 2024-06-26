@@ -52,3 +52,5 @@ Temporary Items
 
 ### Node ###
 node_modules
+.parcel-cache
+dist
